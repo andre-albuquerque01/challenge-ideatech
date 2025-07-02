@@ -18,11 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('users.auth');
-});
 
 Route::middleware('guest')->group(function () {
+    Route::get('/', function () {
+        return view('users.auth');
+    });
     Route::get('/login', [UserController::class, 'showLoginForm'])->name('login')->name('users.auth');
     Route::post('/login', [UserController::class, 'login'])->name('users.login');
     Route::get('/register', [UserController::class, 'create'])->name('users.create');
