@@ -30,5 +30,6 @@
                 <button type="submit" class="btn btn-primary btn-block">Entrar</button>
             </div>
         </form>
+        <a href="{{ route('users.create') }}">Criar conta</a>
     </div>
 @endsection
